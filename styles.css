@@ -35,12 +35,6 @@ h1 {
     margin-bottom: 20px;
 }
 
-.label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
 input[type="password"],
 input[type="number"] {
     width: 100%;
@@ -56,20 +50,20 @@ input[type="number"] {
 }
 
 button {
-    padding: 10px 15px; /* Adjusted padding */
-    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); /* Gradient background */
+    padding: 10px 15px;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
     color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 14px; /* Smaller font size */
+    font-size: 14px;
     transition: background-color 0.3s;
-    margin: 5px; /* Space around buttons */
-    width: calc(50% - 10px); /* Adjusted width for alignment */
+    margin: 5px;
+    width: calc(50% - 10px);
 }
 
 button:hover {
-    background: linear-gradient(135deg, #5a0fa5 0%, #1e5bbd 100%); /* Darker gradient on hover */
+    background: linear-gradient(135deg, #5a0fa5 0%, #1e5bbd 100%);
 }
 
 .strength-meter {
@@ -108,12 +102,12 @@ button:hover {
 }
 
 body.dark-mode button {
-    background: linear-gradient(135deg, #444 0%, #222 100%); /* Darker gradient for buttons */
-    color: white; /* Keep button text white for contrast */
+    background: linear-gradient(135deg, #444 0%, #222 100%);
+    color: white;
 }
 
 body.dark-mode .generated-password {
-    background: #555; /* Darker background for generated password */
-    border: 1px solid #777; /* Lighter border for contrast */
-    color: black; /* Keep text color black */
+    background: #555;
+    border: 1px solid #777;
+    color: black;
 }
