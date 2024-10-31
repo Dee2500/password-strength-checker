@@ -1,58 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #f0f0f0;
-    font-family: 'Arial', sans-serif;
+    background-color: #f7f9fc;
+    font-family: 'Roboto', sans-serif;
     color: #333;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: black; /* Keep text color as black */
 }
 
 .container {
-    max-width: 400px;
-    margin: auto;
+    max-width: 450px;
+    margin: 50px auto;
     padding: 20px;
     background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     text-align: center;
     margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .section {
     margin-bottom: 20px;
 }
 
-label {
+.label {
     display: block;
     margin-bottom: 5px;
+    font-weight: bold;
 }
 
-input {
+input[type="password"],
+input[type="number"] {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 8px;
     margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.password-input {
+    display: flex;
 }
 
 button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
+    padding: 10px 15px; /* Adjusted padding */
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); /* Gradient background */
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
+    font-size: 14px; /* Smaller font size */
+    transition: background-color 0.3s;
+    margin: 5px; /* Space around buttons */
+    width: calc(50% - 10px); /* Adjusted width for alignment */
 }
 
 button:hover {
-    background-color: #0056b3;
+    background: linear-gradient(135deg, #5a0fa5 0%, #1e5bbd 100%); /* Darker gradient on hover */
 }
 
 .strength-meter {
     height: 10px;
     background: #e0e0e0;
-    border-radius: 4px;
+    border-radius: 8px;
     overflow: hidden;
 }
 
@@ -60,6 +83,7 @@ button:hover {
     height: 100%;
     width: 0;
     transition: width 0.3s;
+    border-radius: 8px;
 }
 
 #strengthMessage {
@@ -74,5 +98,22 @@ button:hover {
     text-align: center;
     background: #e0f7fa;
     padding: 10px;
-    border-radius: 4px;
+    border-radius: 8px;
+    border: 1px solid #b2ebf2;
+    color: #00796b;
+}
+
+.criteria {
+    margin: 10px 0;
+}
+
+body.dark-mode button {
+    background: linear-gradient(135deg, #444 0%, #222 100%); /* Darker gradient for buttons */
+    color: white; /* Keep button text white for contrast */
+}
+
+body.dark-mode .generated-password {
+    background: #555; /* Darker background for generated password */
+    border: 1px solid #777; /* Lighter border for contrast */
+    color: black; /* Keep text color black */
 }
