@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Strength Checker & Generator</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -12,8 +13,10 @@
         
         <div class="section">
             <label for="password">Enter Password:</label>
-            <input type="password" id="password" placeholder="Enter your password">
-            <button onclick="checkStrength()">Check Strength</button>
+            <div class="password-input">
+                <input type="password" id="password" placeholder="Enter your password">
+                <button id="toggleVisibility">Show</button>
+            </div>
             <div id="strengthMessage"></div>
             <div class="strength-meter">
                 <div id="strengthBar"></div>
@@ -23,9 +26,18 @@
         <div class="section">
             <label for="length">Enter Length for Generated Password (min 12):</label>
             <input type="number" id="length" placeholder="Minimum 12" min="12">
+            <div class="criteria">
+                <label><input type="checkbox" id="includeUpper"> Include Uppercase</label>
+                <label><input type="checkbox" id="includeLower" checked> Include Lowercase</label>
+                <label><input type="checkbox" id="includeNumbers" checked> Include Numbers</label>
+                <label><input type="checkbox" id="includeSpecial" checked> Include Special Characters</label>
+            </div>
             <button onclick="generatePassword()">Generate Password</button>
+            <button onclick="copyPassword()">Copy Password</button>
             <div id="generatedPassword" class="generated-password"></div>
         </div>
+
+        <button id="toggleDarkMode">Toggle Dark Mode</button>
     </div>
     
     <script src="script.js"></script>
