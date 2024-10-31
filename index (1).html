@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker & Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Password Strength Checker & Generator</h1>
+        
+        <div class="section">
+            <label for="password">Enter Password:</label>
+            <input type="password" id="password" placeholder="Enter your password">
+            <button onclick="checkStrength()">Check Strength</button>
+            <div id="strengthMessage"></div>
+            <div class="strength-meter">
+                <div id="strengthBar"></div>
+            </div>
+        </div>
+
+        <div class="section">
+            <label for="length">Enter Length for Generated Password (min 12):</label>
+            <input type="number" id="length" placeholder="Minimum 12" min="12">
+            <button onclick="generatePassword()">Generate Password</button>
+            <div id="generatedPassword" class="generated-password"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
