@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password Strength Checker & Generator</title>
+    <title data-i18n="title"></title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>Password Strength Checker & Generator</h1>
+        <select id="languageSelector">
+            <option value="en">English</option>
+            <option value="es">Español</option>
+        </select>
+
+        <h1 data-i18n="title"></h1>
         
         <div class="section">
-            <label for="password">Enter Password:</label>
+            <label data-i18n="enterPassword"></label>
             <div class="password-input">
                 <input type="password" id="password" placeholder="Enter your password">
-                <button id="toggleVisibility">Show</button>
+                <button id="toggleVisibility" data-i18n="show"></button>
             </div>
             <div id="strengthMessage"></div>
             <div class="strength-meter">
@@ -24,20 +29,20 @@
         </div>
 
         <div class="section">
-            <label for="length">Enter Length for Generated Password (min 12):</label>
+            <label data-i18n="enterLength"></label>
             <input type="number" id="length" placeholder="Minimum 12" min="12">
             <div class="criteria">
-                <label><input type="checkbox" id="includeUpper"> Include Uppercase</label>
-                <label><input type="checkbox" id="includeLower" checked> Include Lowercase</label>
-                <label><input type="checkbox" id="includeNumbers" checked> Include Numbers</label>
-                <label><input type="checkbox" id="includeSpecial" checked> Include Special Characters</label>
+                <label><input type="checkbox" id="includeUpper"> <span data-i18n="includeUpper"></span></label>
+                <label><input type="checkbox" id="includeLower" checked> <span data-i18n="includeLower"></span></label>
+                <label><input type="checkbox" id="includeNumbers" checked> <span data-i18n="includeNumbers"></span></label>
+                <label><input type="checkbox" id="includeSpecial" checked> <span data-i18n="includeSpecial"></span></label>
             </div>
-            <button id="generateButton">Generate Password</button>
-            <button id="copyButton">Copy Password</button>
+            <button id="generateButton" data-i18n="generate"></button>
+            <button id="copyButton" data-i18n="copy"></button>
             <div id="generatedPassword" class="generated-password"></div>
         </div>
 
-        <button id="toggleDarkMode">Toggle Dark Mode</button>
+        <button id="toggleDarkMode" data-i18n="darkMode"></button>
     </div>
     
     <script src="script.js"></script>
